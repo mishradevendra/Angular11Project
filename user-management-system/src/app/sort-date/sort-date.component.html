@@ -1,0 +1,33 @@
+
+
+<div class="container">
+    <h1>User List</h1>
+    <table class="table table-bordered">
+      <thead>
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>PinCode</th>
+            <th>City</th>
+            <th>JoinDate</th>
+
+
+
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users"   >
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.emailId }}</td>
+          <td>{{ user.pinCode }}</td>
+          <td>{{ user.city }}</td>
+          <td>{{ user.joinDate }}</td>
+
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>

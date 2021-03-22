@@ -1,0 +1,26 @@
+<h2> Search User</h2>
+<div>
+    <input type="search" [(ngModel)]=searchname>
+</div>
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th>PinCode</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users | searchpipe :  searchname">
+            <td> {{ user.firstName }} </td>
+            <td> {{ user.lastName }} </td>
+            <td> {{ user.emailId }} </td>
+            <td> {{ user.pinCode }} </td>
+            <td> {{ user.city }} </td>
+
+        </tr>
+    </tbody>
+</table>

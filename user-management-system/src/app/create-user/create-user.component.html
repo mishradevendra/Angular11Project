@@ -1,0 +1,75 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create User </h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group" [class.has-error]="firstNameControl.invalid && firstNameControl.touched">
+            <label for="firstName" class="control-label"> First Name</label>
+            <input required type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName"
+             name="firstName" #firstNameControl="ngModel">
+             <span class="help-block" *ngIf="firstNameControl.invalid && firstNameControl.touched">First Name is required</span>
+        </div>
+
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="user.lastName" name="lastName">
+        </div>
+
+        <div class="form-group">
+            <label> Email Id</label>
+            <input type="text" class="form-control" id="emailId" [(ngModel)]="user.emailId" name="emailId">
+        </div>
+
+        <div class="form-group">
+            <label> DOB</label>
+            <input type="text" class="form-control" id="dob" [(ngModel)]="user.dob" name="dob">
+        </div>
+
+        <div class="form-group">
+            <label> Age</label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="user.age" name="age">
+        </div>
+
+        <div class="form-group">
+            <label> Gender</label>
+            <input type="text" class="form-control" id="gender" [(ngModel)]="user.gender" name="gender">
+        </div>
+
+        <div class="form-group">
+            <label> Join Date</label>
+            <input type="text" class="form-control" id="joinDate" [(ngModel)]="user.joinDate" name="joinDate">
+        </div>
+
+        <div class="form-group">
+            <label> Mobile Number</label>
+            <input type="text" class="form-control" id="mobileNo" [(ngModel)]="user.mobileNo" name="mobileNo">
+        </div>
+
+        <div class="form-group">
+            <label> Street</label>
+            <input type="text" class="form-control" id="street" [(ngModel)]="user.street" name="street">
+        </div>
+
+        <div class="form-group">
+            <label> City</label>
+            <input type="text" class="form-control" id="city" [(ngModel)]="user.city" name="city">
+        </div>
+
+        <div class="form-group">
+            <label> State</label>
+            <input type="text" class="form-control" id="state" [(ngModel)]="user.state" name="state">
+        </div>
+
+        <div class="form-group">
+            <label> PIN Code</label>
+            <input type="text" class="form-control" id="pinCode" [(ngModel)]="user.pinCode" name="pinCode">
+        </div>
+
+        <div class="form-group">
+            <label> Country </label>
+            <input type="text" class="form-control" id="country" [(ngModel)]="user.country" name="country">
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+
+    </form>
+</div>
